@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to MyShop</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .container img {
+            height: 400px;
+            margin-top: 100px;
+            margin-left: 20px;
+        }
+
+        .container>div {
+            height: 80%;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            margin-left:25px ;
+        }
+
+        button {
+            background-color: rgb(255, 255, 255);
+            width: 100px;
+            color:  rgb(255, 23, 120);
+            height: 35px;
+            margin-right: 20px;
+            font-weight: 600;
+            border: 1px solid #ff009d;
+            border-radius: 5px;
+        }
+
+        #signup {
+            color: aliceblue;
+            background-color: rgb(255, 67, 146);
+        }
+        #signup:hover{
+            background-color: rgb(255, 23, 120);
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.225);
+
+        }
+
+        @media screen and (max-width:900px) {
+            .container{ width: 100%; flex-direction: column;gap: 0px; padding-top: 30px;}
+            .container img{
+                width: 80vw;
+                margin: 4rem;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <div>
+                <h1>MyShop</h1>
+                <p>Your First Shop built on HTML,CSS AND JavaScript</p>
+            </div>
+            <div>
+                <button id="signup">Sign up</button>
+                <button id="login">Log in</button>
+            </div>
+        </div>
+        <img src="./utils/image.png" alt="">
+    </div>
+
+
+    <script>
+        let signupBtn = document.getElementById('signup');
+        let loginBtn = document.getElementById('login');
+
+        signupBtn.addEventListener('click', (e) => {
+            e.preventDefault()
+            window.open('signup.html', '_self')
+        })
+
+        loginBtn.addEventListener('click', (e) => {
+            e.preventDefault()
+            window.open('./authentication/login.html', '_self')
+        })
+    </script>
+</body>
+
+</html>

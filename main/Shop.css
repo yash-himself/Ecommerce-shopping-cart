@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Rubik', sans-serif;
+}
+
+::selection{
+    color: aliceblue;
+    background-color: #ff1f88;
+}
+
+
+body {
+  height: 100%;
+  overflow-y: hidden;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 90px;
+  align-items: center;
+  background-color: rgb(255, 23, 120);
+  color: aliceblue;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+nav ul {
+  display: flex;
+  gap: 30px;
+}
+nav ul li {
+  cursor: pointer;
+}
+nav a {
+  color: rgb(225, 225, 225);
+  font-size: 16px;
+  font-weight: 600;
+}
+nav a:hover {
+  color: aliceblue;
+}
+#parent {
+  width: 100%;
+  display: flex;
+}
+aside {
+  position: relative;
+  width: 260px;
+  height: 96.9vh;
+  overflow: hidden;
+  color: rgb(199, 0, 83);
+  background-color: rgb(255, 224, 238);
+  padding: 20px;
+}
+.filter {
+  padding: 20px;
+}
+
+.filter > h3 {
+  color: rgb(255, 23, 120);
+}
+#colorFilter {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+input[type="checkbox"] {
+  width: 50px;
+  display: inline;
+}
+
+main {
+  width: 100%;
+  padding: 10px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 96vh;
+  overflow-y: scroll;
+  padding-bottom: 50px;
+}
+main input {
+  outline: none;
+  border: 2px solid rgb(255, 23, 120);
+  margin: 20px 20px 50px 20px;
+  width: 60vw;
+  height: 40px;
+  padding: 0px 20px;
+}
+
+#itemContainer {
+  width: 88%;
+  height: auto;
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.item {
+  width: 170px;
+  height: 345px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cartbtn {
+  width: 100%;
+  height: 50px !important;
+  color: aliceblue;
+  background-color: rgb(255, 67, 146);
+  justify-self: flex-end;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.cartbtn:hover {
+  background-color: rgb(255, 23, 120);
+  box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.225);
+}
+
+#cartlen {
+  float: right;
+  padding: 2px 3px;
+  border-radius: 50%;
+  background-color: white;
+  color: black;
+  font-size: 11px;
+  width: auto;
+  max-height: 19px;
+  transform: translate(-120px, -3px);
+}
+.info {
+  height: 85px;
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+}
+
+.title {
+  height: 45px;
+  overflow: hidden;
+}
+
+.filterbtn {
+  width: 100px;
+  height: 35px;
+  background-color: rgb(255, 67, 146);
+  border: none;
+  border-radius: 5px;
+  color: aliceblue;
+  font-weight: 600;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.filterbtn:hover {
+  background-color: rgb(255, 23, 120);
+}
+
+#menu {
+  display: none;
+}
+@media screen and (max-width: 750px) {
+  nav {
+    flex-direction: column;
+  }
+  #cartlen {
+    display: none !important;
+  }
+
+  main{
+    padding: 10px;
+  }
+  #menu {
+    position: absolute;
+    right: 30px;
+    display: block;
+    z-index: 1000;
+    padding-top: 15px;
+    align-self: flex-end;
+  }
+  aside {
+    display: none;
+  }
+  #navUl {
+    padding: 100px;
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(255, 31, 136);
+  }
+  nav ul li {
+    margin: 20px auto;
+  }
+
+  #itemContainer {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  input[type="search"] {
+    width: 80vw;
+  }
+}

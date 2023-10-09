@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">MyShop</div>
+            <a id="menu">&#9776</a>
+            <ul id="navUl">
+                <li><a href="Shop.html">HOME</a> </li>
+                <li id="logout"><a href="../authentication/login.html">LOG OUT</a> </li>
+                <li><a id="gotoCart" href="Cart.html">MY CART</a> </li>
+                <li><a href="profile.html">PROFILE</a> </li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="Container">
+
+
+        <div>Name: <input id="newname" type="text" placeholder="Enter new name"></div>
+        <div>Email: <input id="newemail" type="email" placeholder="Enter new emial"></div>
+        <div style="width: 200px;"><button onclick="changeinfo()">Change</button></div>
+
+    </div>
+
+    <div class="Container">
+
+
+        <div><input id="currpass" type="password" placeholder="Enter Current Password"></div>
+        <div><input id="newpass" type="password" placeholder="Enter new Password"></div>
+        <div style="width: 200px;"><button onclick="changepass()">Change</button></div>
+
+    </div>
+
+    <script src="profile.js"></script>
+</body>
+
+</html>

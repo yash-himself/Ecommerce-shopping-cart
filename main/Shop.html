@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="Shop.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">MyShop</div>
+            <a id="menu">&#9776</a> 
+
+            <ul id="navUl">
+                <li><a href="Shop.html">HOME</a> </li>
+                <li id="logout"><a href="../authentication/login.html">LOG OUT</a> </li>
+                <li><a id="gotoCart">MY CART</a> </li>
+                <li><a href="profile.html">PROFILE</a> </li><span id="cartlen"></span>
+            </ul>
+            
+        </nav>
+       
+    </header>
+    
+    <section id="parent">
+        <aside>
+            <div class="filter" id="colorFilter">
+                <h3>Categories</h3>
+                <div style="display: flex;flex-direction: column;">
+                <div><button class="filterbtn" onclick="allFilter()">All</button></div>
+                <div><button class="filterbtn" onclick="menFilter()">Men</button></div>
+                <div><button class="filterbtn" onclick="womenFilter()">Women</button></div>
+                <div><button class="filterbtn" onclick="electronicsFilter()">Electronics</button> </div>
+                <!-- <div><button class="filterbtn" onclick="colorResult()">Filter</button></div>
+                <div><button class="filterbtn" onclick="colorResult()">Filter</button> </div> -->
+                
+                </div>
+                
+            </div>
+            <hr>
+            <div class="filter" id="priceFilter">
+                <h3>Prices</h3>
+                <div style="display: flex;flex-direction: column;">
+                <div><input class="pricecheck" type="checkbox"  name="price" value="0-25"> $0 - $25</div>
+                <div><input class="pricecheck" type="checkbox" name="price" value="25-50"> $25 - $50</div>
+                <div> <input class="pricecheck" type="checkbox" name="price" value="50-100"> $50 - $100</div>
+                <div><input class="pricecheck" type="checkbox" name="price" value="100+"> $100 +</div>
+                <button class="filterbtn"  onclick="priceResult()">Filter</button>
+                
+            </div>
+            </div>
+            <hr>
+            
+            <div  class="filter" id="ratingfilter">
+                <h3>Ratings</h3>
+                0<input onchange="rangeResult()" type="range" min="0" max="5" name="rating" id="ratings">5
+                <div>0 - <span id="thisRating">4</span></div>
+            </div>
+
+           
+        </aside>
+        <main>
+            <div><input id="search" oninput="searchResult()" type="search" height="40px" placeholder="Search product"></div>
+            
+
+            <section id="itemContainer">
+                
+                
+                </section>
+
+
+
+
+        </main>
+    </section>
+
+
+
+
+
+   <script src="shop.js"></script>
+</body>
+</html>

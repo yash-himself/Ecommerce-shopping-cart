@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'rubik',sans-serif;
+}
+body{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(15, 15, 27);
+    display: flex;
+    flex-flow: row-reverse;
+    flex-wrap: wrap;
+   
+}
+
+::selection{
+    color: aliceblue;
+    background-color: #ff1f88;
+}
+
+
+
+form{
+    margin:4rem auto;
+    width: 40%;
+    height: 60vh;
+    background-color: rgb(255, 203, 254);
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+input{
+    all: unset;
+    height: 40px;
+    width: 60%;
+    background-color: rgb(240, 233, 255);
+    padding: 0px 15px;
+    border-radius: 5px;
+}
+input[type='submit']{
+    color: aliceblue;
+    background-color: rgb(255, 67, 146);
+    text-align: center;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+input[type='submit']:hover{
+    background-color: rgb(255, 23, 120);
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.225);
+
+}
+
+img{
+    height: 70vh;
+    margin: 4rem;
+}
+
+@media screen and (max-width:700px) {
+    form{
+        width: 70%;
+    }
+}
+@media screen and (max-width:500px) {
+    form{
+        width: 90%;
+    }
+}
