@@ -34,7 +34,7 @@ submit.addEventListener('click', (e) => {
             Users.push(newObj)
            localStorage.setItem('users',  JSON.stringify(Users))
            document.querySelector('form').reset();
-           window.open('../authentication/login.html', '_self')
+           window.open('./authentication/login.html', '_self')
      
         }
         else{
