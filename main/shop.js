@@ -94,7 +94,7 @@ let cartNav = document.getElementById('gotoCart');
 cartNav.addEventListener('click', (e) => {
     e.preventDefault()
 
-    window.location.href = "cart.html"
+    window.location.href = "Cart.html"
 })
 
 
